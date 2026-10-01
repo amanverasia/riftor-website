@@ -1,406 +1,118 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import RiftTerminal from '../components/RiftTerminal.astro';
 import PixelArt from '../components/PixelArt.astro';
 import PageWidgets from '../components/PageWidgets.astro';
 ---
 
 <Layout>
   <PageWidgets />
-  <!-- ═══ TICKER BAR ═══ -->
-  <div class="border-b border-void-border bg-void-panel overflow-hidden">
-    <div class="flex whitespace-nowrap ticker-scroll py-1.5">
-      {Array.from({length: 2}).map(() => (
-        <span class="flex items-center gap-6 px-6 text-[11px] sm:text-[13px] tracking-wider shrink-0">
-          <span class="text-rift-amber">▸ RIFTOR v<span class="riftor-version">3.1.0</span></span>
-          <span class="text-rift-dim">OFFENSIVE SECURITY AI AGENT</span>
-          <span class="text-rift-cyan">▸ PYTHON 3.11+</span>
-          <span class="text-rift-dim">GPL-3.0 LICENSE</span>
-          <span class="text-rift-green">▸ STATUS: ONLINE</span>
-          <span class="text-rift-dim">CLOUD-FIRST · SCOPE-ENFORCED</span>
-          <span class="text-rift-rose">▸ RIFT METHODOLOGY</span>
-          <span class="text-rift-dim">RECON → INTRUSION → FOOTHOLD → TAKEOVER</span>
-        </span>
-      ))}
-    </div>
+  <div class="border-b border-void-border bg-void-panel px-4 py-2 text-center silkscreen text-[10px] sm:text-xs tracking-wider text-rift-cyan">
+    STANDALONE CLI · PI RUNTIME EMBEDDED · AUTHORIZED ASSESSMENTS
   </div>
 
-  <!-- ═══ NAV ═══ -->
   <nav class="sticky top-0 z-50 border-b-2 border-void-border-bright bg-void/95 backdrop-blur-sm">
-    <div class="max-w-4xl mx-auto px-4 sm:px-5 h-12 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2">
-        <PixelArt name="terminal" size={20} />
-        <span class="silkscreen text-[14px] sm:text-[16px] text-rift-amber tracking-wide">RIFTOR</span>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 silkscreen text-rift-amber">
+        <PixelArt name="terminal" size={22} /> RIFTOR
       </a>
-      <div class="flex items-center gap-4 sm:gap-5 text-[12px] sm:text-[14px] text-rift-dim">
-        <a href="https://github.com/Estudely/riftor/blob/main/docs/configuration.md" target="_blank" rel="noopener noreferrer" class="hover:text-rift-amber transition-colors">Docs</a>
-        <a href="https://github.com/Estudely/riftor" target="_blank" rel="noopener noreferrer" class="hover:text-rift-amber transition-colors">GitHub</a>
-        <a href="https://pypi.org/project/riftor/" target="_blank" rel="noopener noreferrer" class="hover:text-rift-amber transition-colors">PyPI</a>
+      <div class="flex items-center gap-5 text-sm text-rift-dim">
+        <a href="#design" class="hover:text-rift-amber transition-colors">Design</a>
+        <a href="#roadmap" class="hover:text-rift-amber transition-colors">Roadmap</a>
+        <a href="https://github.com/amanverasia/riftor" target="_blank" rel="noopener noreferrer" class="hover:text-rift-amber transition-colors">Source</a>
       </div>
     </div>
   </nav>
 
   <main class="pixel-grid">
-
-    <!-- ═══ HERO ═══ -->
-    <section class="pt-10 sm:pt-16 pb-14 sm:pb-20 px-4 sm:px-5">
-      <div class="max-w-4xl mx-auto">
-
-        <div class="flex flex-col sm:flex-row items-start gap-5 sm:gap-6 mb-8 sm:mb-10">
-          <div class="pixel-idle shrink-0">
-            <PixelArt name="hacker" size={64} class="sm:!w-[80px] sm:!h-[80px]" />
+    <section class="px-4 sm:px-6 pt-16 sm:pt-24 pb-20">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-[1fr_auto] gap-10 items-center">
+        <div>
+          <p class="silkscreen text-xs text-rift-cyan mb-5">LOCAL-FIRST SECURITY WORKFLOW</p>
+          <h1 class="silkscreen text-3xl sm:text-5xl leading-tight text-rift-text mb-6">
+            A harness for security work.<br />
+            <span class="text-rift-amber">Built around your control.</span>
+          </h1>
+          <p class="text-rift-muted text-base sm:text-lg leading-relaxed max-w-2xl mb-8">
+            Riftor is a standalone terminal application for authorized security assessments.
+            It embeds Pi's agent runtime and adds the engagement controls, scoped tools,
+            evidence, and reporting that security work needs.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://github.com/amanverasia/riftor" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-5 py-3 border-2 border-rift-amber text-rift-amber silkscreen text-xs hover:bg-rift-amber/10 transition-colors">
+              VIEW SOURCE <span aria-hidden="true">↗</span>
+            </a>
+            <a href="#roadmap" class="inline-flex items-center px-5 py-3 border-2 border-void-border-bright text-rift-muted silkscreen text-xs hover:border-rift-cyan hover:text-rift-cyan transition-colors">
+              SEE THE BUILD PLAN
+            </a>
           </div>
-          <div class="min-w-0">
-            <div class="flex flex-wrap items-center gap-2 sm:gap-3 mb-3">
-              <span class="silkscreen text-[11px] text-rift-dim px-2 py-1 border-2 border-void-border-bright bg-void-panel">LVL 5</span>
-              <span class="text-[11px] sm:text-[13px] text-rift-dim tracking-widest uppercase">agent class: offensive-security</span>
-            </div>
-            <h1 class="silkscreen text-[22px] sm:text-[34px] leading-[1.3] mb-3">
-              <span class="text-rift-text">Find the rift.</span><br/>
-              <span class="text-rift-amber">Open it.</span>
-              <span class="text-rift-text"> Cross through.</span>
-            </h1>
-            <p class="text-[14px] sm:text-[15px] text-rift-muted leading-relaxed max-w-lg">
-              An AI agent that lives in your terminal. Set scope, task the agent,
-              review findings, generate pentest reports. It runs real tools. You stay in control.
-            </p>
-            <div class="mt-4 flex flex-col sm:flex-row sm:items-center gap-2 px-3 py-2 border-2 border-dashed border-rift-cyan/30 bg-rift-cyan/5">
-              <span class="silkscreen text-[10px] text-rift-cyan shrink-0">OPEN SOURCE</span>
-              <span class="text-[12px] sm:text-[13px] text-rift-dim leading-relaxed">v<span class="riftor-version">3.1.0</span> — scope-enforced agent loop, 350+ skills, subagents, browser tools. <code class="text-rift-muted">pip install riftor</code></span>
-            </div>
-          </div>
+          <p class="mt-6 text-xs text-rift-dim">Early rebuild · Not yet released · Authorized testing only</p>
         </div>
-
-        <!-- Stats bar -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-8 sm:mb-10">
-          <div class="px-box p-3 text-center crt-hover">
-            <div class="silkscreen text-[20px] sm:text-[22px] text-rift-amber">30+</div>
-            <div class="text-[10px] sm:text-[11px] text-rift-dim tracking-widest uppercase mt-1">TOOLS</div>
-          </div>
-          <div class="px-box p-3 text-center crt-hover">
-            <div class="silkscreen text-[20px] sm:text-[22px] text-rift-cyan">350+</div>
-            <div class="text-[10px] sm:text-[11px] text-rift-dim tracking-widest uppercase mt-1">SKILLS</div>
-          </div>
-          <div class="px-box p-3 text-center crt-hover">
-            <div class="silkscreen text-[20px] sm:text-[22px] text-rift-green">∞</div>
-            <div class="text-[10px] sm:text-[11px] text-rift-dim tracking-widest uppercase mt-1">MODELS</div>
-          </div>
-          <div class="px-box p-3 text-center crt-hover">
-            <div class="silkscreen text-[20px] sm:text-[22px] text-rift-rose">100%</div>
-            <div class="text-[10px] sm:text-[11px] text-rift-dim tracking-widest uppercase mt-1">AUDIT LOGGED</div>
-          </div>
-        </div>
-
-        <!-- Terminal -->
-        <RiftTerminal />
-        <p class="text-[11px] sm:text-[12px] text-rift-dim mt-2 text-center silkscreen">
-          ↑ INTERACTIVE · TYPE /help OR /demo ↑
-        </p>
+        <div class="hidden md:block pixel-idle"><PixelArt name="shield" size={144} /></div>
       </div>
     </section>
 
-    <!-- ═══ INSTALL ═══ -->
-    <section class="py-12 sm:py-16 px-4 sm:px-5 border-t-2 border-void-border-bright">
-      <div class="max-w-4xl mx-auto">
-        <div class="flex items-center gap-3 mb-5">
-          <span class="silkscreen text-[12px] text-rift-amber">DEPLOY</span>
+    <section id="design" class="border-t-2 border-void-border-bright py-16 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-3 mb-8">
+          <span class="silkscreen text-xs text-rift-amber">THE DESIGN</span>
           <span class="flex-1 border-t border-void-border"></span>
+          <span class="silkscreen text-[10px] text-rift-dim">PI UNDER THE HOOD</span>
         </div>
-
-        <div class="game-frame" id="install-block">
-          <div class="flex gap-0 border-b-2 border-void-border-bright overflow-x-auto" id="install-tabs">
-            <button data-tab="pip" class="install-tab active px-3 sm:px-4 py-2.5 text-[12px] sm:text-[13px] text-rift-muted transition-colors shrink-0">pip</button>
-            <button data-tab="source" class="install-tab px-3 sm:px-4 py-2.5 text-[12px] sm:text-[13px] text-rift-dim hover:text-rift-muted transition-colors shrink-0">source</button>
-          </div>
-          <div class="p-3 sm:p-4 text-[13px] sm:text-[14px] overflow-x-auto">
-            <div data-panel="pip" class="flex items-center justify-between gap-3">
-              <code class="whitespace-nowrap"><span class="text-rift-dim select-none">$ </span><span class="text-rift-text">pip install riftor</span></code>
-              <button data-copy="pip install riftor" class="text-rift-dim hover:text-rift-amber text-[11px] silkscreen transition-colors shrink-0">COPY</button>
-            </div>
-            <div data-panel="source" class="hidden flex items-center justify-between gap-3">
-              <code class="whitespace-nowrap"><span class="text-rift-dim select-none">$ </span><span class="text-rift-text">git clone https://github.com/Estudely/riftor && cd riftor && uv sync && uv run riftor</span></code>
-              <button data-copy="git clone https://github.com/Estudely/riftor && cd riftor && uv sync && uv run riftor" class="text-rift-dim hover:text-rift-amber text-[11px] silkscreen transition-colors shrink-0">COPY</button>
-            </div>
-          </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <article class="game-frame p-5">
+            <div class="mb-4"><PixelArt name="shield" size={36} /></div>
+            <h2 class="silkscreen text-xs text-rift-cyan mb-3">AUTHORIZATION & SCOPE</h2>
+            <p class="text-sm text-rift-muted leading-relaxed">Every engagement declares its authorized assets, exclusions, allowed activities, and expiration before active work can begin.</p>
+          </article>
+          <article class="game-frame p-5">
+            <div class="mb-4"><PixelArt name="key" size={36} /></div>
+            <h2 class="silkscreen text-xs text-rift-amber mb-3">POLICY AT EXECUTION</h2>
+            <p class="text-sm text-rift-muted leading-relaxed">Tool calls pass through one policy gateway. Unknown targets and unavailable approval are denied by default.</p>
+          </article>
+          <article class="game-frame p-5">
+            <div class="mb-4"><PixelArt name="terminal" size={36} /></div>
+            <h2 class="silkscreen text-xs text-rift-green mb-3">EVIDENCE & REPORTS</h2>
+            <p class="text-sm text-rift-muted leading-relaxed">Actions, evidence, and findings stay linked so an operator can review what happened and produce a portable report.</p>
+          </article>
         </div>
-        <p class="text-[11px] sm:text-[12px] text-rift-dim mt-3 leading-relaxed">
-          Python 3.11+ · set <span class="text-rift-muted">ANTHROPIC_API_KEY</span>, <span class="text-rift-muted">OPENAI_API_KEY</span>, or <span class="text-rift-muted">OPENROUTER_API_KEY</span> · local <span class="text-rift-muted">Ollama</span> works too
-        </p>
+        <p class="mt-5 text-xs text-rift-dim leading-relaxed">Pi is the embedded agent runtime. Riftor is installed and run as its own application; no separate Pi CLI install is required.</p>
       </div>
     </section>
 
-    <!-- ═══ RIFT STAGES ═══ -->
-    <section class="py-14 sm:py-20 px-4 sm:px-5 border-t-2 border-void-border-bright">
-      <div class="max-w-4xl mx-auto">
-        <div class="flex items-center gap-3 mb-6 sm:mb-8">
-          <span class="silkscreen text-[12px] text-rift-amber">MISSION STAGES</span>
+    <section id="roadmap" class="border-t-2 border-void-border-bright py-16 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-3 mb-8">
+          <span class="silkscreen text-xs text-rift-amber">BUILD ROADMAP</span>
           <span class="flex-1 border-t border-void-border"></span>
-          <span class="silkscreen text-[11px] text-rift-dim">4 / 4 UNLOCKED</span>
         </div>
-
-        <div class="space-y-4 sm:space-y-5">
+        <ol class="space-y-3">
           {[
-            { letter: 'R', name: 'RECON', desc: 'Discover hosts, ports, services. Find fault lines before they find you.', subtitle: 'MAP THE SURFACE', color: 'amber', icon: 'radar' as const, xp: '90', tools: ['nmap', 'subfinder', 'httpx', 'dig', 'whatweb', 'gobuster'], stg: '01', delay: '0ms' },
-            { letter: 'I', name: 'INTRUSION', desc: 'Identify the weakness. Exploit it. Get in.', subtitle: 'OPEN THE RIFT', color: 'cyan', icon: 'key' as const, xp: '80', tools: ['nuclei', 'ffuf', 'sqlmap', 'nikto'], stg: '02', delay: '100ms' },
-            { letter: 'F', name: 'FOOTHOLD', desc: 'Post-exploitation. Persistence. Credential harvesting. Loot.', subtitle: 'HOLD POSITION', color: 'rose', icon: 'shield' as const, xp: '60', tools: ['shells', 'persist', 'creds'], stg: '03', delay: '200ms' },
-            { letter: 'T', name: 'TAKEOVER', desc: 'Escalate. Move lateral. Complete the mission. Write the report.', subtitle: 'OWN THE OBJECTIVE', color: 'danger', icon: 'skull' as const, xp: '40', tools: ['privesc', 'lateral', 'report'], stg: '04', delay: '300ms' },
-          ].map((s) => (
-            <div class="reveal stage-level p-3 sm:p-4" data-active={s.stg === '01' ? 'true' : undefined} style={`transition-delay: ${s.delay}`}>
-              <div class="flex items-start gap-3 sm:gap-4">
-                <div class="shrink-0 text-center hidden sm:block">
-                  <div class="pixel-idle" style={s.stg !== '01' ? `animation-delay: ${parseInt(s.stg) * 0.5}s` : undefined}>
-                    <PixelArt name={s.icon} size={40} />
-                  </div>
-                  <div class="silkscreen text-[9px] text-rift-dim mt-1">STG-{s.stg}</div>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <div class="flex flex-wrap items-baseline gap-1.5 sm:gap-2 mb-1">
-                    <span class={`silkscreen text-[18px] sm:text-[20px] text-rift-${s.color}`}>{s.letter}</span>
-                    <span class="silkscreen text-[12px] sm:text-[14px] text-rift-text">{s.name}</span>
-                    <span class="text-[11px] text-rift-dim ml-auto tracking-widest hidden sm:inline">{s.subtitle}</span>
-                  </div>
-                  <p class="text-[13px] sm:text-[14px] text-rift-muted mb-2">{s.desc}</p>
-                  <div class="flex items-center justify-between text-[10px] sm:text-[11px] mb-1">
-                    <span class="text-rift-dim">tool coverage</span>
-                    <span class={`silkscreen text-rift-${s.color}`}>{s.xp}%</span>
-                  </div>
-                  <div class="xp-bar mb-2" data-color={s.color} data-xp={s.xp}></div>
-                  <div class="flex flex-wrap gap-1">
-                    {s.tools.map((t) => (
-                      <span class="text-[10px] sm:text-[11px] px-1.5 py-0.5 border border-void-border-bright text-rift-dim silkscreen">{t}</span>
-                    ))}
-                  </div>
-                </div>
+            ['01', 'Standalone Pi-powered CLI', 'Embed the agent runtime and establish the application shell.'],
+            ['02', 'Engagement authorization', 'Represent scope, exclusions, allowed activities, and expiry.'],
+            ['03', 'Enforced tool gateway', 'Apply policy and approvals at every tool execution boundary.'],
+            ['04', 'Evidence and reporting', 'Capture provenance, manage findings, and export reviewable reports.'],
+          ].map(([number, title, description]) => (
+            <li class="game-frame p-4 sm:p-5 flex gap-4 items-start">
+              <span class="silkscreen text-sm text-rift-cyan">{number}</span>
+              <div>
+                <h2 class="silkscreen text-xs text-rift-text mb-2">{title}</h2>
+                <p class="text-sm text-rift-muted">{description}</p>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
 
-    <!-- ═══ ACHIEVEMENTS ═══ -->
-    <section class="py-14 sm:py-20 px-4 sm:px-5 border-t-2 border-void-border-bright">
-      <div class="max-w-4xl mx-auto">
-        <div class="flex items-center gap-3 mb-6 sm:mb-8">
-          <span class="silkscreen text-[12px] text-rift-amber">ACHIEVEMENTS UNLOCKED</span>
-          <span class="flex-1 border-t border-void-border"></span>
-          <span class="silkscreen text-[11px] text-rift-dim">5 / 5</span>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-          <!-- Scope -->
-          <div class="reveal achievement p-4 crt-hover" data-color="danger">
-            <div class="flex items-start gap-3">
-              <div class="shrink-0"><PixelArt name="shield" size={32} /></div>
-              <div class="min-w-0">
-                <div class="silkscreen text-[12px] text-rift-danger mb-1">SCOPE ENFORCER</div>
-                <p class="text-[13px] text-rift-muted leading-relaxed">
-                  Out-of-scope targets are hard-blocked. Every tool call checked. Override per-call only.
-                </p>
-              </div>
-            </div>
-            <div class="mt-3 px-box p-2 text-[12px] sm:text-[13px] overflow-x-auto">
-              <div><span class="text-rift-amber">❯</span> /scope add 10.0.0.0/24</div>
-              <div class="text-rift-dim">in-scope += 10.0.0.0/24</div>
-              <div class="mt-1"><span class="text-rift-amber">❯</span> nmap evil.com</div>
-              <div class="text-rift-danger text-[11px]">⚠ BLOCKED — out of scope</div>
-            </div>
-          </div>
-
-          <!-- Permissions -->
-          <div class="reveal achievement p-4 crt-hover" data-color="cyan" style="transition-delay: 80ms">
-            <div class="flex items-start gap-3">
-              <div class="shrink-0"><PixelArt name="key" size={32} /></div>
-              <div class="min-w-0">
-                <div class="silkscreen text-[12px] text-rift-cyan mb-1">PERMISSION GATES</div>
-                <p class="text-[13px] text-rift-muted leading-relaxed">
-                  Runs nmap, nuclei, ffuf, sqlmap for real. Dangerous ops need your approval.
-                </p>
-              </div>
-            </div>
-            <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-3">
-              <span class="px-2 py-1 text-[10px] sm:text-[11px] text-rift-green border border-rift-green/30 silkscreen">ALLOW <kbd>a</kbd></span>
-              <span class="px-2 py-1 text-[10px] sm:text-[11px] text-rift-amber border border-rift-amber/30 silkscreen">SESSION <kbd>s</kbd></span>
-              <span class="px-2 py-1 text-[10px] sm:text-[11px] text-rift-danger border border-rift-danger/30 silkscreen">DENY <kbd>esc</kbd></span>
-            </div>
-          </div>
-
-          <!-- Findings -->
-          <div class="reveal achievement p-4 crt-hover" data-color="rose" style="transition-delay: 160ms">
-            <div class="flex items-start gap-3">
-              <div class="shrink-0"><PixelArt name="skull" size={32} /></div>
-              <div class="min-w-0">
-                <div class="silkscreen text-[12px] text-rift-rose mb-1">VULN HUNTER</div>
-                <p class="text-[13px] text-rift-muted leading-relaxed">
-                  CVSS v3.1 scoring. Records findings with severity, evidence, remediation. Generates reports.
-                </p>
-              </div>
-            </div>
-            <div class="flex flex-wrap gap-1.5 mt-3 text-[10px] sm:text-[11px] silkscreen">
-              <span class="px-1.5 py-0.5 text-rift-danger border border-rift-danger/30">CRIT</span>
-              <span class="px-1.5 py-0.5 text-rift-rose border border-rift-rose/30">HIGH</span>
-              <span class="px-1.5 py-0.5 text-rift-amber border border-rift-amber/30">MED</span>
-              <span class="px-1.5 py-0.5 text-rift-cyan border border-rift-cyan/30">LOW</span>
-              <span class="px-1.5 py-0.5 text-rift-dim border border-void-border-bright">INFO</span>
-            </div>
-          </div>
-
-          <!-- Models -->
-          <div class="reveal achievement p-4 crt-hover" data-color="amber" style="transition-delay: 240ms">
-            <div class="flex items-start gap-3">
-              <div class="shrink-0"><PixelArt name="terminal" size={32} /></div>
-              <div class="min-w-0">
-                <div class="silkscreen text-[12px] text-rift-amber mb-1">MODEL SWITCHER</div>
-                <p class="text-[13px] text-rift-muted leading-relaxed">
-                  Anthropic, OpenAI, OpenRouter, or local Ollama. Switch mid-session. Powered by litellm.
-                </p>
-              </div>
-            </div>
-            <div class="flex flex-wrap gap-1.5 mt-3 text-[10px] sm:text-[11px] silkscreen">
-              <span class="px-1.5 py-0.5 border border-void-border-bright text-rift-muted">Anthropic</span>
-              <span class="px-1.5 py-0.5 border border-void-border-bright text-rift-muted">OpenAI</span>
-              <span class="px-1.5 py-0.5 border border-void-border-bright text-rift-muted">OpenRouter</span>
-              <span class="px-1.5 py-0.5 border border-void-border-bright text-rift-muted">Ollama</span>
-            </div>
-          </div>
-
-          <!-- Persistence -->
-          <div class="reveal achievement p-4 crt-hover sm:col-span-2" data-color="green" style="transition-delay: 320ms">
-            <div class="flex items-start gap-3">
-              <div class="shrink-0"><PixelArt name="hacker" size={32} /></div>
-              <div class="min-w-0">
-                <div class="silkscreen text-[12px] text-rift-green mb-1">SESSION KEEPER</div>
-                <p class="text-[13px] text-rift-muted leading-relaxed">
-                  Engagement state, scope, findings, conversation — all auto-saved to <span class="text-rift-muted">.riftor/</span>.
-                  Resume with /resume, start fresh with /new.
-                  Themes: <span class="text-rift-amber">rift</span> · <span class="text-rift-cyan">void</span> · <span class="text-rift-rose">fracture</span> · singularity.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="border-t-2 border-void-border-bright py-14 px-4 sm:px-6 text-center">
+      <p class="silkscreen text-xs text-rift-text mb-3">OPEN SOURCE · GPL-3.0-OR-LATER</p>
+      <p class="text-sm text-rift-dim mb-6">Built for authorized security work. Riftor is under active rebuild.</p>
+      <a href="https://github.com/amanverasia/riftor" target="_blank" rel="noopener noreferrer" class="silkscreen text-xs text-rift-amber hover:text-rift-cyan transition-colors">CONTRIBUTE ON GITHUB ↗</a>
     </section>
-
-    <!-- ═══ WORKFLOW ═══ -->
-    <section class="py-12 sm:py-16 px-4 sm:px-5 border-t-2 border-void-border-bright">
-      <div class="max-w-4xl mx-auto">
-        <div class="flex items-center gap-3 mb-6">
-          <span class="silkscreen text-[12px] text-rift-amber">MISSION PROTOCOL</span>
-          <span class="flex-1 border-t border-void-border"></span>
-        </div>
-
-        <div class="reveal game-frame p-4 sm:p-5 text-[13px] sm:text-[14px]">
-          <div class="space-y-4">
-            {[
-              { n: '01', color: 'amber', label: 'SET SCOPE', cmd: '/scope add 10.0.0.0/24 example.com' },
-              { n: '02', color: 'cyan', label: 'TASK THE AGENT', cmd: '"enumerate the web host and look for low-hanging fruit"' },
-              { n: '03', color: 'rose', label: 'REVIEW', cmd: '/findings' },
-              { n: '04', color: 'danger', label: 'REPORT', cmd: '/report → .riftor/reports/report-*.html' },
-            ].map((step, i, arr) => (
-              <Fragment>
-                <div class="flex gap-3 sm:gap-4 items-start">
-                  <span class={`silkscreen text-[14px] text-rift-${step.color} shrink-0 w-6`}>{step.n}</span>
-                  <div class="min-w-0">
-                    <span class="silkscreen text-[12px] sm:text-[13px] text-rift-text">{step.label}</span>
-                    <span class="text-rift-dim ml-2 sm:ml-3 text-[12px] sm:text-[13px] break-all">{step.cmd}</span>
-                  </div>
-                </div>
-                {i < arr.length - 1 && <div class="border-t border-void-border"></div>}
-              </Fragment>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ BOTTOM CTA ═══ -->
-    <section class="py-16 sm:py-24 px-4 sm:px-5 border-t-2 border-void-border-bright">
-      <div class="max-w-4xl mx-auto text-center">
-        <div class="reveal">
-          <div class="pixel-idle inline-block mb-4"><PixelArt name="hacker" size={48} /></div>
-          <p class="silkscreen text-[13px] sm:text-[14px] text-rift-text mb-1">OPEN SOURCE · GPL-3.0</p>
-          <p class="text-[13px] sm:text-[14px] text-rift-dim mb-2">
-            Authorized security testing only. Written permission required.
-          </p>
-          <p class="text-[12px] text-rift-dim/60 mb-6">
-            open source · GPL-3.0 — grab it, break it, make it yours.
-          </p>
-
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-            <a href="https://github.com/Estudely/riftor" target="_blank" rel="noopener noreferrer"
-               class="achievement inline-flex items-center gap-2 px-5 py-2.5 text-[12px] text-rift-muted silkscreen hover:text-rift-amber hover:border-rift-amber transition-all w-full sm:w-auto justify-center" data-color="amber">
-              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              GITHUB
-            </a>
-            <a href="https://pypi.org/project/riftor/" target="_blank" rel="noopener noreferrer"
-               class="achievement inline-flex items-center gap-2 px-5 py-2.5 text-[12px] text-rift-dim silkscreen hover:text-rift-cyan hover:border-rift-cyan transition-all w-full sm:w-auto justify-center" data-color="cyan">
-              $ pip install riftor
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ═══ FOOTER ═══ -->
-  <footer class="border-t-2 border-void-border-bright py-6 sm:py-8 px-4 sm:px-5 pb-16 sm:pb-8">
-    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] sm:text-[11px] text-rift-dim silkscreen">
-      <div class="flex items-center gap-2">
-        <span class="text-rift-amber">RIFTOR</span>
-        <span>·</span>
-        <span>RIFT METHODOLOGY</span>
-        <span>·</span>
-        <a href="https://github.com/Estudely" target="_blank" rel="noopener noreferrer" class="hover:text-rift-muted transition-colors">ESTUDELY</a>
-      </div>
-      <a href="https://github.com/Estudely/riftor/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="hover:text-rift-muted transition-colors">GPL-3.0</a>
-    </div>
+  <footer class="border-t-2 border-void-border-bright py-6 px-4 sm:px-6 text-center silkscreen text-[10px] text-rift-dim">
+    RIFTOR · <a class="hover:text-rift-muted" href="https://github.com/amanverasia">AMANVERASIA</a> · AUTHORIZED ASSESSMENTS ONLY
   </footer>
-
-  <!-- Install tabs script -->
-  <script>
-    const tabs = document.querySelectorAll('#install-tabs button');
-    const panels = document.querySelectorAll('#install-block [data-panel]');
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const target = (tab as HTMLElement).dataset.tab;
-        tabs.forEach(t => {
-          t.classList.toggle('active', (t as HTMLElement).dataset.tab === target);
-          t.classList.toggle('text-rift-muted', (t as HTMLElement).dataset.tab === target);
-          t.classList.toggle('text-rift-dim', (t as HTMLElement).dataset.tab !== target);
-        });
-        panels.forEach(p => {
-          (p as HTMLElement).classList.toggle('hidden', (p as HTMLElement).dataset.panel !== target);
-        });
-      });
-    });
-
-    document.querySelectorAll('[data-copy]').forEach(btn => {
-      btn.addEventListener('click', async () => {
-        const text = (btn as HTMLElement).dataset.copy || '';
-        await navigator.clipboard.writeText(text);
-        const orig = btn.textContent;
-        btn.textContent = 'COPIED!';
-        btn.classList.add('text-rift-green');
-        setTimeout(() => {
-          btn.textContent = orig;
-          btn.classList.remove('text-rift-green');
-        }, 1200);
-      });
-    });
-
-    // Fetch live version from shields.io PyPI badge
-    fetch('https://img.shields.io/pypi/v/riftor')
-      .then(r => r.text())
-      .then(svg => {
-        const m = svg.match(/>v?([\d.]+(?:[\w.-]*))<\/text>\s*<\/g>\s*<\/svg>/);
-        if (m) {
-          document.querySelectorAll('.riftor-version').forEach(el => {
-            el.textContent = m[1];
-          });
-        }
-      })
-      .catch(() => {});
-  </script>
 </Layout>

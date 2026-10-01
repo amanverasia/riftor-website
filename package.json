@@ -1,7 +1,13 @@
 {
-  "name": "riftor-site",
+  "name": "riftor-website",
   "type": "module",
   "version": "0.0.1",
+  "description": "Website for the Riftor cybersecurity assessment harness",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amanverasia/riftor-website.git"
+  },
+  "homepage": "https://riftor.dev",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -9,8 +15,8 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^5.9.0",
-    "@tailwindcss/vite": "^4.1.8",
-    "tailwindcss": "^4.1.8"
+    "@tailwindcss/vite": "4.3.3",
+    "astro": "7.3.5",
+    "tailwindcss": "4.3.3"
   }
 }
