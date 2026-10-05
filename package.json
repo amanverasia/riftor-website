@@ -12,11 +12,16 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "postinstall": "node scripts/patch-http-cache-semantics.mjs",
+    "test": "node --test"
   },
   "dependencies": {
     "@tailwindcss/vite": "4.3.3",
     "astro": "7.3.5",
     "tailwindcss": "4.3.3"
+  },
+  "devDependencies": {
+    "http-cache-semantics": "4.3.0"
   }
 }
